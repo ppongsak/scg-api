@@ -8,7 +8,7 @@ const search = async (req, res) => {
 
     const results = axios
         .get(
-            'https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyDLFp7yzSJl4Ddl3vDSA-5Et42YLBPmbf4&location=13.806212,100.5355183&radius=50&type=restaurant'
+            'https://maps.googleapis.com/maps/api/place/nearbysearch/json?key=AIzaSyDLFp7yzSJl4Ddl3vDSA-5Et42YLBPmbf4&location=13.806212,100.5355183&radius=5000&type=restaurant'
         )
         .then(function(response) {
             return response

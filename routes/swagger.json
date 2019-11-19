@@ -1,0 +1,83 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0",
+        "title": "scg",
+        "description": "API documents | basic authen username:scgtest, password:scgtest",
+        "contact": {}
+    },
+    "host": "localhost:3030",
+    "basePath": "/api/v1/scg",
+    "securityDefinitions": {
+        "auth": {
+            "type": "basic"
+        }
+    },
+    "schemes": ["http"],
+    "consumes": ["application/json"],
+    "produces": ["application/json"],
+    "paths": {
+        "/string": {
+            "get": {
+                "description": "find string x,y,z",
+                "summary": "Get : string",
+                "tags": ["string"],
+                "operationId": "StringGet",
+                "deprecated": false,
+                "produces": ["application/json"],
+                "parameters": [
+                    {
+                        "name": "search",
+                        "in": "query",
+                        "required": true,
+                        "type": "string",
+                        "description": ""
+                    },
+                    {
+                        "name": "value",
+                        "in": "query",
+                        "required": true,
+                        "type": "string",
+                        "description": ""
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        },
+        "/restaurants": {
+            "get": {
+                "description": "find nearby restaurant around here",
+                "summary": "http://localhost:3030/api/v1/scg/restaurants",
+                "tags": ["restaurants"],
+                "operationId": "RestaurantsGet",
+                "deprecated": false,
+                "produces": ["application/json"],
+                "parameters": [],
+                "responses": {
+                    "200": {
+                        "description": "",
+                        "headers": {}
+                    }
+                }
+            }
+        }
+    },
+    "security": [
+        {
+            "auth": []
+        }
+    ],
+    "tags": [
+        {
+            "name": "string"
+        },
+        {
+            "name": "restaurants"
+        }
+    ]
+}
